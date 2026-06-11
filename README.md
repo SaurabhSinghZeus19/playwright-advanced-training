@@ -64,13 +64,18 @@ playwright-advanced-training/
 
 # Current Test Coverage
 
-1) Browser Windows
+1) Browser Windows ![](browserWindows.png)
 - TC_001 Verify New tab button opens a new tab
 - TC_002 Verify content of newly opened tab
 - TC_003 Close child tab and switch back to parent
 - TC_004 Verify New Window Message functionality
 
-2) Network Mocking
+2) Network Mocking  ![](networkMocking.png)
 - TC_005 Mock books API with custom data
 - TC_006 Mock empty API response
 - TC_007 Mock delayed API response
+
+
+
+
+
