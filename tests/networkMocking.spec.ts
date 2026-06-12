@@ -4,7 +4,7 @@ import { mockBooksResponse, mockEmptyBooksResponse, mockDelayedBooksResponse } f
 
 
 
-
+// Return custom book data instead of actual API response
 test('TC_005 Mock Books API with custom books',
     async ({ page, bookStorePage, logger }) => {
         logger.info('Mocking Books API with custom data');
@@ -23,7 +23,7 @@ test('TC_005 Mock Books API with custom books',
         await expect(page.getByText('Advanced Playwright Testing')).toBeVisible();
     }
 );
-
+// Verify application behavior when no books are returned
 test('TC_006 Mock empty response',
     async ({ page,bookStorePage, logger }) => {
         logger.info('Mocking Books API with empty response');
@@ -43,7 +43,7 @@ test('TC_006 Mock empty response',
         await expect(page.getByText('Page 1 of 0')).toBeVisible();
     }
 );
-
+// Simulate slow API response using delayed mock data
 test('TC_007 Delay API response',
     async ({ page,bookStorePage, logger }) => {
         logger.info('Mocking Delayed Books API response');

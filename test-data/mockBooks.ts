@@ -1,3 +1,7 @@
+// Test data used for network mocking scenarios
+
+
+// Custom book response
 export const mockBooksResponse = {
     books: [
         {
@@ -14,10 +18,12 @@ export const mockBooksResponse = {
     ]
 };
 
+// Empty book response
 export const mockEmptyBooksResponse = {
     books: []
 };
 
+// Delayed response data
 export const mockDelayedBooksResponse = {
     books: [
         {

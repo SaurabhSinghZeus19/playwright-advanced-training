@@ -1,3 +1,5 @@
+// Page object for book store page
+
 import { Page } from "@playwright/test";
 
 export class BookStorePage {
@@ -7,6 +9,7 @@ export class BookStorePage {
     }
 
     async goto(): Promise<void> {
+        // open book store page
         await this.page.goto('https://demoqa.com/books');
     }
 }

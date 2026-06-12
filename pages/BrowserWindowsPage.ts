@@ -1,3 +1,5 @@
+// Page object for browser windows page
+
 import { Page, Locator } from "@playwright/test";
 
 export class BrowserWindowsPage {
@@ -12,6 +14,7 @@ export class BrowserWindowsPage {
     }
 
     async goto(): Promise<void> {
+        // navigate to browser windows page
         await this.page.goto('https://demoqa.com/browser-windows');
     }   
 }

@@ -1,13 +1,15 @@
+
+
 import { test, expect } from "../fixtures/customFixtures";
 
-
+// Open browser windows page before each test
 test.beforeEach(async ({ browserWindowsPage, logger }) => {
     // const browserWindowsPage = new BrowserWindowsPage(page);
     logger.info('Opening Browser Windows page');
     await browserWindowsPage.goto();
     }
 );
-
+// Verify a new tab opens successfully
 test('TC_001 Verify New Tab Button opens a new tab',
     async ({ page, context }) => {
         const [newPage] = await Promise.all([
@@ -19,7 +21,7 @@ test('TC_001 Verify New Tab Button opens a new tab',
 
     }
 );
-
+// Validate content displayed in the child tab
 test('TC_002 Verify content of newly opened tab',
     async ({ page, context }) => {
         const [newPage] = await Promise.all([
@@ -30,7 +32,7 @@ test('TC_002 Verify content of newly opened tab',
         await expect(newPage.getByText('This is a sample page')).toBeVisible();
     }
 );
-
+// Close child tab and continue on parent page
 test('TC_003 Close child tab and switch back to parent',
     async ({ page, context }) => {
         const [newPage] = await Promise.all([
@@ -43,7 +45,7 @@ test('TC_003 Close child tab and switch back to parent',
         await expect(page.locator("#tabButton")).toBeVisible();
     }
 );
-
+// Verify message window functionality
 test('TC_004 Close child tab and switch back to parent',
     async ({ page, context }) => {
         const [newPage] = await Promise.all([
