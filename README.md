@@ -14,6 +14,13 @@ is to explore browser window handling and network interception techniques that a
 
 playwright-advanced-training/
 |
+|_____ docs/
+|      |___ debugging-report.md
+|
+|_____ fixtures
+|      |___ customFixtures.ts
+|
+|
 |_____ pages/
 |      |___ BrowserWindowsPage.ts
 |      |___ BookStorePage.ts
@@ -24,6 +31,9 @@ playwright-advanced-training/
 |_____ tests/
 |      |___ browserWindows.spec.ts
 |      |___ networkMocking.spec.ts
+|
+|_____ utils/
+|      |___ Logger.ts
 |
 |_____ .gitignore
 |
@@ -61,6 +71,9 @@ playwright-advanced-training/
 4) Run Tests in Headed Mode
 - npx playwright test --headed
 
+5) view trace viewer
+- npx playwright test --trace on
+
 
 # Current Test Coverage
 
@@ -74,6 +87,17 @@ playwright-advanced-training/
 - TC_005 Mock books API with custom data
 - TC_006 Mock empty API response
 - TC_007 Mock delayed API response
+
+# FIxtures
+- Implemented page object fixtures for BrowserWindowsPage and BookStorePage.
+- Implemented Logger utility fixture
+
+# Reports & Debugging
+- Generated Playwright HTML reports.
+- Used Trace Viewer for execution analysis
+- Documented 5 failure categories and 3 timeout categories.
+
+
 
 
 

@@ -1,8 +1,9 @@
-import { test, expect } from "@playwright/test";
-import { BrowserWindowsPage } from "../pages/BrowserWindowsPage";
+import { test, expect } from "../fixtures/customFixtures";
 
-test.beforeEach(async ({ page }) => {
-    const browserWindowsPage = new BrowserWindowsPage(page);
+
+test.beforeEach(async ({ browserWindowsPage, logger }) => {
+    // const browserWindowsPage = new BrowserWindowsPage(page);
+    logger.info('Opening Browser Windows page');
     await browserWindowsPage.goto();
     }
 );
